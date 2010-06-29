@@ -1,0 +1,45 @@
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES('My test submission', '2010-06-24 21:32:43', '2010-06-24 21:32:43', 'http://www.testsubmission.com/')[0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES('My test submission', '2010-06-24 21:33:16', '2010-06-24 21:33:16', 'http://www.testsubmission.com/')[0m
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES('My test submission', '2010-06-24 21:33:53', '2010-06-24 21:33:53', 'http://www.testsubmission.com/')[0m
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES('My test submission', '2010-06-24 21:34:16', '2010-06-24 21:34:16', 'http://www.testsubmission.com/')[0m
+
+
+Processing StoriesController#index (for 0.0.0.0 at 2010-06-24 14:39:38) [GET]
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 26ms (View: 23, DB: 3) | 200 OK [http://test.host/stories]
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES('My test submission', '2010-06-24 22:11:05', '2010-06-24 22:11:05', 'http://www.testsubmission.com/')[0m
+
+
+Processing StoriesController#create (for 0.0.0.0 at 2010-06-24 15:11:06) [POST]
+  Parameters: {"story"=>{"name"=>"test story", "link"=>"http://www.test.com/"}}
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES('test story', '2010-06-24 22:11:06', '2010-06-24 22:11:06', 'http://www.test.com/')[0m
+Redirected to http://test.host/stories
+Completed in 5ms (DB: 2) | 302 Found [http://test.host/stories?story%5Blink%5D=http%3A%2F%2Fwww.test.com%2F&story%5Bname%5D=test+story]
+
+
+Processing StoriesController#create (for 0.0.0.0 at 2010-06-24 15:11:06) [POST]
+  Parameters: {"story"=>{"name"=>"story without a link"}}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/stories?story%5Bname%5D=story+without+a+link]
+
+
+Processing StoriesController#index (for 0.0.0.0 at 2010-06-24 15:11:06) [GET]
+  [4;35;1mStory Load (0.6ms)[0m   [0mSELECT * FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/stories]
+
+
+Processing StoriesController#new (for 0.0.0.0 at 2010-06-24 15:11:06) [GET]
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/stories/new]
+
+
+Processing StoriesController#new (for 0.0.0.0 at 2010-06-24 15:11:06) [GET]
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/stories/new]
